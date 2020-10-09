@@ -1,0 +1,59 @@
+//* Program Billing Warnet *//
+/* Rangga Waskita Dewa (20051397055) */
+#include <conio.h>
+#include <stdio.h>
+
+int main()
+{	
+	int j1,m1,d1,j2,m2,d2,jam,menit,detik;
+	float totjam,totmenit,totdetik,bayar;
+	
+	printf ("BILLING WARNET RANGGA WASKITA DEWA\n");
+	printf ("NIM 20051397055");
+	printf ("\n");
+	printf ("========================================================================================================================");
+	printf ("						Tarif Rp 5000 Per Jam");
+	printf ("\n");
+	printf ("========================================================================================================================");
+	printf ("\n \n");
+	
+	printf ("MULAI \n");
+	printf ("JAM MULAI   =");
+	scanf ("%d", &j1);
+	printf ("MENIT MULAI =");
+	scanf ("%d", &m1);
+	printf ("DETIK MULAI =");
+	scanf ("%d", &d1);
+	printf ("\n \n");
+	
+	printf ("Selesai \n");
+	printf ("JAM SELESAI   =");
+	scanf ("%d", &j2);
+	printf ("MENIT SELESAI =");
+	scanf ("%d", &m2);
+	printf ("DETIK SELESAI =");
+	scanf ("%d", &d2);
+	
+	jam = j2 - j1;
+	menit = m2 - m1;
+	detik = d2 - d1;
+	
+	totjam = jam*5000;
+	totmenit = menit*5000/60;
+	totdetik = detik*5000/3600;
+	printf ("\n \n");
+	
+	bayar = totjam + totmenit + totdetik;
+	
+	printf ("Total Lama Pemakaian = %d Jam, %d Menit, %d Detik\n", jam, menit, detik);
+	printf ("Total Biaya Yang Harus Dibayar = %.2f + %.2f + %.2f = Rp %.2f,-", totjam, totmenit, totdetik, bayar);
+	printf ("\n \n");
+	
+	printf ("===========================================");
+	printf ("Terima Kasih Atas Kunjungan Anda:)");
+	printf ("===========================================");
+	printf ("\n");
+	
+	getch ();
+	return 0;
+}
